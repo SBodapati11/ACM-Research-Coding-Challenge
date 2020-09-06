@@ -29,6 +29,8 @@ Regardless if you can or cannot answer the question, provide a short explanation
 
 I know a little from learning over the summer, but I did some additional research to enhance my understanding of clustering algorithms. I used a Gaussian Mixture Model clustering algorithm. I chose this algorithm over the K-means model because of 2 advantages: 1) a GMM allows oval-shaped/stretched clusters instead of just circular clusters and 2) provides the probabilities that the data points point to a certain cluster. I used the sklearn (sci-kit learn) library, specifically sklearn.mixture.GaussianMixture. The GaussianMixture allows for a model to be created given the number of components and covariance type (I used 'full'). To determine the optimal number of clusters/components, I learned that this the value that has the lowest Akaike information criterion (AIC) or Bayesian information criterion (BIC). I was able to find these values for up to 15 clusters, determining that both 2 and 3 clusters can be reasonably found in the dataset. However, to choose one out of the two, I looked at the probabilities that each data point belongs in a cluster using gmm.predict_proba(dataset) and noticed that data points in 2 clusters were much more likely than in 3. Therefore, I concluded that there are 2 clusters in the dataset.
 
+**Libraries I used: numpy, pandas, sklearn.mixture, matplotlib.pyplot**
+
 I adapted my code from the following article: https://towardsdatascience.com/gaussian-mixture-models-d13a5e915c8e
 
 MLA Citation of source: 
